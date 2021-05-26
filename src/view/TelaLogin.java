@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package telalogin;
+package view;
 
 import javax.swing.JOptionPane;
+import java.util.List;
+import login.Usuario;
 
 /**
  *
@@ -13,10 +15,12 @@ import javax.swing.JOptionPane;
  */
 public class TelaLogin extends javax.swing.JFrame {
 
+
     /**
      * Creates new form Login
      */
     public TelaLogin() {
+    	runner.Runner.adicionarUsuario();
         initComponents();
     }
 
@@ -46,6 +50,8 @@ public class TelaLogin extends javax.swing.JFrame {
 
         jPasswordField1.setText("jPasswordField1");
 
+        jTextField1.setText("oi");
+        jTextField1.setToolTipText("");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -148,8 +154,9 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-       JOptionPane.showMessageDialog(null, "Bem Vindo"); 
-        
+    	List<Usuario> listaUsers = dados.Dados.listaUsers;
+    	Usuario mrc = listaUsers.get(0);
+        JOptionPane.showMessageDialog(null, mrc.getUser());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

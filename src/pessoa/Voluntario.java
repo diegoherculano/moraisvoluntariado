@@ -9,7 +9,7 @@ public class Voluntario extends Pessoa {
     }
     
     public void aceitarTrabalho(Trabalho trabalho) {
-        
+        System.out.println("pessoa.Voluntario.aceitarTrabalho()");
     }
     
 }

@@ -2,16 +2,30 @@ package login;
 
 import pessoa.Pessoa;
 
-public class Usuario extends Pessoa {
-	private String user;
-	private String senha;
-    private String tipo;
-    
-	public Usuario(String nome, String tipo, String documento, String user, String senha, String tipo2) {
-		super(nome, tipo, documento);
+public class Usuario {
+
+    private String user;
+    private String senha;
+
+    public Usuario(Pessoa pessoa, String user, String senha) {
+        this.setUser(user);
+        this.setSenha(senha);
+    }
+
+	public String getUser() {
+		return user;
+	}
+
+	public void setUser(String user) {
 		this.user = user;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
 		this.senha = senha;
-		this.tipo = tipo2;
-	} 
- 
+	}
+
 }
