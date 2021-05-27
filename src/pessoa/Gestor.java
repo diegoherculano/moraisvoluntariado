@@ -12,8 +12,10 @@ public class Gestor extends Pessoa {
 		
 	}
 	
-	public String analisarGastos() {
-		return null;
+	public double analisarGastos(Evento gastoValor) {
+		double gastos = (gastoValor.getGastoValor());
+		
+		return gastos;
 	}
 	
 	
