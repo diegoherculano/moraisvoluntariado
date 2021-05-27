@@ -1,4 +1,6 @@
 package pessoa;
+import empresa.Evento;
+import empresa.Doacao;
 
 public class Gestor extends Pessoa {
 
@@ -14,9 +16,13 @@ public class Gestor extends Pessoa {
 		return null;
 	}
 	
-	public String analisarReceitas() {
-		return null;
+	
+	public double analisarReceitas(Doacao quantiaDoada, Evento gastoValor, double totalReceita) {
+		totalReceita  = (gastoValor.getGastoValor()) - (quantiaDoada.getQuantiaDoada());
+					
+		return  totalReceita;
 	}
+	
 	
 	public String relatorio() {
 		return null;

@@ -31,5 +31,15 @@ public class Evento {
 		
 		return null;
 	}
+
+	public double getGastoValor() {
+		return gastoValor;
+	}
+
+	public void setGastoValor(double gastoValor) {
+		this.gastoValor = gastoValor;
+	}
 	
+	
+
 }
