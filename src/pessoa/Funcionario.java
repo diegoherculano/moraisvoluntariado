@@ -27,4 +27,12 @@ public class Funcionario extends Pessoa {
     public void importar(File file) {
         
     }
+
+    public void desativarUsuario(Voluntario voluntario) {
+        voluntario.setAtivo(false);
+    }
+
+    public void ativarUsuario(Voluntario voluntario) {
+        voluntario.setAtivo(true);
+    }
 }
