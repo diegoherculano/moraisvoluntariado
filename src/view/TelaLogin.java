@@ -145,10 +145,7 @@ public class TelaLogin extends javax.swing.JFrame {
         String tipoUsuario = "";
         if (!usuario.isEmpty() && !senha.isEmpty()) {
             tipoUsuario = logar(usuario, senha);
-        } else {
-            JOptionPane.showMessageDialog(null, "Digite usuario ou senha");
         }
-
         switch (tipoUsuario) {
             case "Gestor":
                 this.setVisible(false);
