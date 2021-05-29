@@ -2,7 +2,6 @@ package login;
 
 import pessoa.Funcionario;
 import pessoa.Gestor;
-import pessoa.Pessoa;
 import pessoa.Voluntario;
 
 public class Usuario {

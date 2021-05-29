@@ -8,6 +8,7 @@ public class Login {
         // Adiciona valores para teste
         adicionarGestor();
         adicionarVoluntario();
+        adicionarFuncionario();
         
         // Aqui comeca o metodo logar
         for (int i = 0; i < listaUsers.size(); i++) {
