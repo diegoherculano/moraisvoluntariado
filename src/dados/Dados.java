@@ -2,6 +2,7 @@
 package dados;
 
 import empresa.Evento;
+import empresa.Trabalho;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,5 +17,6 @@ public class Dados {
 	public static List<Gestor> listaGestores = new ArrayList<Gestor>();
 	public static List<Funcionario> listaFuncionarios = new ArrayList<Funcionario>();
         public static List<Evento> listaEventos = new ArrayList<Evento>();
+        public static List<Trabalho> listaTrabalhos = new ArrayList<Trabalho>();
 	public static Usuario usuarioLogado;
 }

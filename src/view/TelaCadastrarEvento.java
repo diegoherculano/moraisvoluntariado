@@ -160,16 +160,16 @@ public class TelaCadastrarEvento extends javax.swing.JFrame {
         Evento evento = new Evento(jTextField1.getText(), jTextField2.getText(), Double.parseDouble(jTextField3.getText()), jTextField4.getText());
         if (jTextField1.getText().isEmpty() || jTextField2.getText().isEmpty() || jTextField3.getText().isEmpty() || jTextField4.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+        } else {
+            try {
+                listaEventos.add(evento);
+                JOptionPane.showMessageDialog(null, "Evento adicionado com sucesso");
+                this.setVisible(false);
+                new TelaFuncionario().setVisible(true);
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Algum erro ocorreu");
+            }
         }
-        try {
-            listaEventos.add(evento);
-            JOptionPane.showMessageDialog(null, "Evento adicionado com sucesso");
-            this.setVisible(false);
-            new TelaFuncionario().setVisible(true);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Algum erro ocorreu");
-        }
-
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
