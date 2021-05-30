@@ -121,15 +121,16 @@ public class TelaRemoverVoluntario extends javax.swing.JFrame {
         // Pega o ID do Voluntario
         String segments[] = selectedItem.split(":");
         String id = segments[segments.length - 1];
-        
+
         try {
             listaVoluntarios.remove(Integer.parseInt(id));
             JOptionPane.showMessageDialog(null, "Voluntario removido com sucesso");
+            this.setVisible(false);
+            new TelaFuncionario().setVisible(true);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Algum erro ocorreu");
         }
-        this.setVisible(false);
-        new TelaFuncionario().setVisible(true);
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

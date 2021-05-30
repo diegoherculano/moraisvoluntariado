@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package view;
+
 import static dados.Dados.*;
+
 /**
  *
  * @author Diego Herculano
@@ -73,6 +75,11 @@ public class TelaFuncionario extends javax.swing.JFrame {
         jButton6.setToolTipText("");
 
         jButton7.setText("Cadastrar eventos");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton8.setText("Cadastrar trabalhos");
 
@@ -160,6 +167,12 @@ public class TelaFuncionario extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new TelaCadastrarEvento().setVisible(true);
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
