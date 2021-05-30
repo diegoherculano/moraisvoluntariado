@@ -46,7 +46,7 @@ public class TelaCadastroVoluntario extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Cadastro Voluntário");
+        jLabel1.setText("Cadastro Voluntario");
 
         jLabel2.setText("Nome:");
 
@@ -54,7 +54,7 @@ public class TelaCadastroVoluntario extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setSelected(true);
-        jRadioButton1.setText("Pessoa física");
+        jRadioButton1.setText("Pessoa fisica");
         jRadioButton1.setActionCommand("PF");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,7 +63,7 @@ public class TelaCadastroVoluntario extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Pessoa Jurídica");
+        jRadioButton2.setText("Pessoa Juridica");
         jRadioButton2.setActionCommand("PJ");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

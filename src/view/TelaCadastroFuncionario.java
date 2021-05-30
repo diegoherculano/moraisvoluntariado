@@ -46,7 +46,7 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Cadastro Funcionário");
+        jLabel1.setText("Cadastro Funcionario");
 
         jLabel2.setText("Nome:");
 
@@ -56,7 +56,7 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setSelected(true);
-        jRadioButton1.setText("Pessoa Física");
+        jRadioButton1.setText("Pessoa fisica");
         jRadioButton1.setToolTipText("");
         jRadioButton1.setActionCommand("PF");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -66,7 +66,7 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Pessoa Jurídica");
+        jRadioButton2.setText("Pessoa juridica");
         jRadioButton2.setActionCommand("PJ");
 
         jButton1.setText("Cadastrar");
