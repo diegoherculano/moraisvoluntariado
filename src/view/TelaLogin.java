@@ -8,6 +8,7 @@ package view;
 import static login.Login.logar;
 import javax.swing.JOptionPane;
 import static dados.Dados.listaUsers;
+import static dados.Dados.usuarioLogado;
 
 /**
  *
@@ -161,7 +162,12 @@ public class TelaLogin extends javax.swing.JFrame {
                 new TelaGestor().setVisible(true);
                 break;
             case "Voluntario":
-                System.out.println("Voluntario");
+                if (usuarioLogado.getVoluntario().getAtivo()) {
+                    this.setVisible(false);
+                    new TelaVoluntario().setVisible(true);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Usuario inativo");
+                }
                 break;
             case "Funcionario":
                 this.setVisible(false);

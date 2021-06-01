@@ -33,4 +33,23 @@ public class Runner {
         listaUsers.add(luc);
     }
 
+    public static void adicionarEventosETrabalhos() {
+        Evento evento1 = new Evento("Jantar Beneficente", "12/01/2022", 90000, "Arranjos, Bolo");
+        Evento evento2 = new Evento("Futebol beneficente", "23/04/2021", 90000, "Estrutura, aluguel");
+        Evento evento3 = new Evento("Volei beneficente", "17/06/2024", 90000, "Esrutura, aluguel");
+        Evento evento4 = new Evento("Caminhada beneficente", "01/04/2022", 90000, "Estrutura, aluguel");
+        listaEventos.add(evento1);
+        listaEventos.add(evento2);
+        listaEventos.add(evento3);
+        listaEventos.add(evento4);
+        Trabalho trabalho1 = new Trabalho(evento1, "Entregador");
+        Trabalho trabalho2 = new Trabalho(evento2, "Arbitro");
+        Trabalho trabalho3 = new Trabalho(evento3, "Gandula");
+        Trabalho trabalho4 = new Trabalho(evento4, "Faxineiro");
+        listaTrabalhos.add(trabalho1);
+        listaTrabalhos.add(trabalho2);
+        listaTrabalhos.add(trabalho3);
+        listaTrabalhos.add(trabalho4);
+    }
+
 }
