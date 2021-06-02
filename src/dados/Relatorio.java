@@ -11,6 +11,7 @@ import java.io.PrintWriter;
 import static dados.Dados.*;
 import empresa.Doacao;
 import login.Usuario;
+import pessoa.Voluntario;
 import static runner.Runner.*;
 
 /**
@@ -21,9 +22,22 @@ public class Relatorio {
 
     public static void main(String[] args) throws Exception {
         adicionarDoacoes();
-        gerarRelatorioDoacoes();
+        gerarRelatorioVoluntarios();
     }
 
+     public static void gerarRelatorioVoluntarios() throws Exception {
+        FileWriter arquivo = new FileWriter("C:\\Users\\Diego Herculano\\Documents\\voluntarios.txt");
+        PrintWriter gravar = new PrintWriter(arquivo);
+        gravar.printf("VOLUNTARIOS \n");
+        for (Voluntario lista : listaVoluntarios) {
+            gravar.printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n");
+            gravar.printf("Voluntario Nome: " + lista.getNome() + "\n");
+            gravar.printf("Voluntario Tipo: " + lista.getTipo() + "\n");
+            gravar.printf("Voluntario Documento: " + lista.getDocumento() + "\n");
+        }
+        arquivo.close();
+    }
+     
     public static void gerarRelatorioDoacoes() throws Exception {
         FileWriter arquivo = new FileWriter("C:\\Users\\Diego Herculano\\Documents\\doacoes.txt");
         PrintWriter gravar = new PrintWriter(arquivo);
