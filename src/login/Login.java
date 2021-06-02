@@ -4,13 +4,17 @@ import static dados.Dados.listaUsers;
 import static dados.Dados.usuarioLogado;
 import static runner.Runner.*;
 public class Login {
-
+    public static boolean naoRepetir = false;
+    
     public static String logar(String usuario, String senha) {
-        // Adiciona valores para teste
-        adicionarGestor();
-        adicionarVoluntario();
-        adicionarFuncionario();
-        adicionarEventosETrabalhos();
+        if (!naoRepetir) {
+            // Adiciona valores para teste
+            adicionarGestor();
+            adicionarVoluntario();
+            adicionarFuncionario();
+            adicionarEventosETrabalhos();
+            naoRepetir = true;
+        }
         
         // Aqui comeca o metodo logar
         for (int i = 0; i < listaUsers.size(); i++) {

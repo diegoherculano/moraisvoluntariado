@@ -8,6 +8,7 @@ import pessoa.Pessoa;
 import pessoa.Voluntario;
 import java.util.List;
 import static dados.Dados.*;
+import empresa.Doacao;
 import pessoa.Funcionario;
 
 public class Runner {
@@ -50,6 +51,19 @@ public class Runner {
         listaTrabalhos.add(trabalho2);
         listaTrabalhos.add(trabalho3);
         listaTrabalhos.add(trabalho4);
+    }
+
+    public static void adicionarDoacoes() {
+        Voluntario tulio = new Voluntario("Tulio", "PJ", "321321");
+        Voluntario valder = new Voluntario("Valder", "PF", "89878");
+
+        Doacao doacao1 = new Doacao(tulio, 8000, "Deposito", true);
+        Doacao doacao2 = new Doacao(valder, 30000, "Dinheiro", true);
+
+        listaDoacao.add(doacao1);
+        listaDoacao.add(doacao2);
+        listaVoluntarios.add(valder);
+        listaVoluntarios.add(tulio);
     }
 
 }
