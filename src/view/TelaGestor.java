@@ -10,6 +10,7 @@ import static dados.Relatorio.gerarRelatorioFinanceiro;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author Diego Herculano
@@ -161,9 +162,9 @@ public class TelaGestor extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Relatorio salvo em documentos");
         try {
             gerarRelatorioFinanceiro();
+            JOptionPane.showMessageDialog(null, "Relatorio salvo em documentos");
         } catch (Exception ex) {
             Logger.getLogger(TelaGestor.class.getName()).log(Level.SEVERE, null, ex);
         }

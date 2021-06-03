@@ -26,7 +26,7 @@ public class Relatorio {
     }
 
     public static void gerarRelatorioVoluntarios() throws Exception {
-        FileWriter arquivo = new FileWriter("%USERPROFILE%\\Documents\\relVoluntarios.txt");
+        FileWriter arquivo = new FileWriter("C:\\Users\\Diego Herculano\\Documents\\relVoluntarios.txt");
         PrintWriter gravar = new PrintWriter(arquivo);
         gravar.printf("VOLUNTARIOS \n");
         for (Voluntario lista : listaVoluntarios) {
