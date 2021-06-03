@@ -4,28 +4,27 @@
  * and open the template in the editor.
  */
 package view;
+
 import static dados.Dados.*;
 import empresa.Doacao;
-
+import empresa.Evento;
 import javax.swing.DefaultListModel;
-import javax.swing.JLabel;
-import login.Usuario;
 
 /**
  *
  * @author Diego Herculano
  */
-public class TelaReceitas extends javax.swing.JFrame {
+public class TelaDespesas extends javax.swing.JFrame {
 
     /**
-     * Creates new form TelaReceitas
+     * Creates new form TelaDespesas
      */
-    public TelaReceitas() {
+    public TelaDespesas() {
         initComponents();
-        jLabel3.setText(String.valueOf(usuarioLogado.getGestor().totalDoacao()));
+        jLabel3.setText(String.valueOf(usuarioLogado.getGestor().totalGastos()));
         DefaultListModel model = new DefaultListModel();
-        for (Doacao doacao : listaDoacao) {
-            model.addElement(doacao.getVoluntario().getNome() + " | doacao R$" + doacao.getQuantiaDoada() + " | " + doacao.getFormaEntrega());
+        for (Evento evento : listaEventos) {
+            model.addElement(evento.getNome() + " | " +evento.getGastoNome() + " | gasto R$" + evento.getGastoValor() + " | " + evento.getData());
         }
         jList1.setModel(model);
     }
@@ -49,11 +48,12 @@ public class TelaReceitas extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Receitas");
+        jLabel1.setText("Despesas");
 
         jScrollPane1.setViewportView(jList1);
 
         jLabel2.setText("Total:");
+        jLabel2.setToolTipText("");
 
         jLabel3.setText("jLabel3");
 
@@ -69,12 +69,13 @@ public class TelaReceitas extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -87,13 +88,13 @@ public class TelaReceitas extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addComponent(jButton1))
         );
 
@@ -140,20 +141,20 @@ public class TelaReceitas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaReceitas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDespesas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaReceitas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDespesas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaReceitas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDespesas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaReceitas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDespesas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaReceitas().setVisible(true);
+                new TelaDespesas().setVisible(true);
             }
         });
     }
