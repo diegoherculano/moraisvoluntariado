@@ -6,11 +6,9 @@
 package dados;
 
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
 import static dados.Dados.*;
 import empresa.Doacao;
-import login.Usuario;
 import pessoa.Voluntario;
 import static runner.Runner.*;
 
@@ -25,7 +23,7 @@ public class Relatorio {
         gerarRelatorioVoluntarios();
     }
 
-     public static void gerarRelatorioVoluntarios() throws Exception {
+    public static void gerarRelatorioVoluntarios() throws Exception {
         FileWriter arquivo = new FileWriter("C:\\Users\\Diego Herculano\\Documents\\voluntarios.txt");
         PrintWriter gravar = new PrintWriter(arquivo);
         gravar.printf("VOLUNTARIOS \n");
@@ -37,7 +35,7 @@ public class Relatorio {
         }
         arquivo.close();
     }
-     
+
     public static void gerarRelatorioDoacoes() throws Exception {
         FileWriter arquivo = new FileWriter("C:\\Users\\Diego Herculano\\Documents\\doacoes.txt");
         PrintWriter gravar = new PrintWriter(arquivo);

@@ -13,6 +13,7 @@ public class Login {
             adicionarVoluntario();
             adicionarFuncionario();
             adicionarEventosETrabalhos();
+            adicionarDoacoes();
             naoRepetir = true;
         }
         
